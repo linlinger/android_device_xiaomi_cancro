@@ -71,7 +71,7 @@ PRODUCT_PACKAGES += \
     sensors.msm8974
 
 # Touch
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.cancro
 
 # WiFi

@@ -38,11 +38,11 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/releasetools/device_check.sh:install/bin/device_check.sh
 
 # FM Radio
+BOARD_HAVE_QCOM_FM := true
+TARGET_FM_LEGACY_PATCHLOADER := true
 PRODUCT_PACKAGES += \
     FMRadio \
     libfmjni
-BOARD_HAVE_QCOM_FM := true
-TARGET_FM_LEGACY_PATCHLOADER := true
 
 PRODUCT_PACKAGES += \
     init.qcom.fm.sh

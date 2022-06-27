@@ -13,6 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Inherit from cancro device
+$(call inherit-product, device/xiaomi/cancro/cancro.mk)
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
@@ -29,16 +31,6 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := MI Cancro
 
-# Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_cancro
-PRODUCT_DEVICE := cancro
-PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := MI Cancro
-PRODUCT_MANUFACTURER := Xiaomi
-
-
-PRODUCT_CHARACTERISTICS := nosdcard
-
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-
+TARGET_CONTINUOUS_SPLASH_ENABLED := true

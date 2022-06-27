@@ -16,8 +16,6 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-# TRAP TO GET MAKEFILE LOCATION, WILL BE REMOVED SOON.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_32_bit.mk)
 
 # Inherit some common PixelExperience stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)

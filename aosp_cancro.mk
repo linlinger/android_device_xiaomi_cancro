@@ -13,10 +13,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit from cancro device
-$(call inherit-product, device/xiaomi/cancro/cancro.mk)
 
-# Inherit some common LineageOS stuff.
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+# TRAP TO GET MAKEFILE LOCATION, WILL BE REMOVED SOON.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_32_bit.mk)
+
+# Inherit some common PixelExperience stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Shipping API level
@@ -28,6 +31,16 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := MI Cancro
 
+# Device identifier. This must come after all inclusions.
+PRODUCT_NAME := aosp_cancro
+PRODUCT_DEVICE := cancro
+PRODUCT_BRAND := Xiaomi
+PRODUCT_MODEL := MI Cancro
+PRODUCT_MANUFACTURER := Xiaomi
+
+
+PRODUCT_CHARACTERISTICS := nosdcard
+
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-TARGET_CONTINUOUS_SPLASH_ENABLED := true
+

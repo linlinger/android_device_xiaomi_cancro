@@ -17,6 +17,5 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_cancro.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_cancro-user \
     aosp_cancro-userdebug \
     aosp_cancro-eng
